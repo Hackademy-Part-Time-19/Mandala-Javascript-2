@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Unità_Disponibili = 100
+
+        let ordine = parseInt(prompt("Ciao, al momento abbiamo " + Unità_Disponibili + " action figure disponibili vuoi effettuare un ordine?\n\nPremi 1 per effettuare un ordine\n\nPremi 2 per uscire"))
+
+        switch (ordine) {
+            
+            case 1:
+
+                let Quantità_Ordine =parseInt(prompt("Inserisci la quantità di pezzi che vuoi acquistare."))
+                    
+                if (Unità_Disponibili-Quantità_Ordine >=0) {
+
+                    Unità_Disponibili = Unità_Disponibili-Quantità_Ordine;
+
+                    alert("Il suo ordine verrà presto spedito")
+
+                    alert ("La quantità disponibile adesso è di " + Unità_Disponibili + "pezzi.")
+                } else{
+                    alert("Quantità non disponibile")
+                }
+                    break;
+
+            case 2:
+        
+                alert("Grazie comunque e torni a trovarci")
+
+            default:
+                alert("Scelta non valida")
+                break;
+        }
+
+
+    </script>
+</body>
+</html>
